@@ -1,0 +1,49 @@
+#App {
+  background: linear-gradient(to right, #98DBC6, #5BC8AC);
+  height: 100vh;
+  display: grid;
+}
+
+#wrapper {
+  display: grid;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Beth Ellen';
+  color: #F18D9E;
+}
+
+#quote-box {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+}
+
+#text {
+  font-family: 'Bitter';
+  color: #FFFFFF;
+  font-size: 2.4rem;
+  padding: 60px 50px 0;
+}
+
+#author {
+  font-family: 'Bitter';
+  color: #E6D72A;
+  font-size: 1.8rem;
+  text-align: right;
+  padding: 20px 90px 20px;
+}
+
+#new-quote {
+  margin: 10px 10px 0;
+}
+
+#tweet-quote {
+  margin: 10px 10px 0;
+}
+
+#tweet-quote a {
+  text-decoration: none;
+  color: #000000;
+}

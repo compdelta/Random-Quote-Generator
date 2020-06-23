@@ -1,0 +1,41 @@
+const quotes = {
+  "text": ["There are nights when the wolves are silent and only the moon howls.", "There’s nothing wrong with having a tree as a friend.", "Poetry is an echo asking a shadow to dance.", "All cats are mortal. Socrates is mortal. Therefore Socrates is a cat.", "Cannibals prefer those who have no spines.", "I can wait for you longer. Because you have arrived."],
+  "author": ["George Carlin", "Bob Ross", "Carl Sandburg", "Eugene Ionesco", "Stanislaw Jerzy Lec", "Antonio Porchia"]
+}
+
+const min = 1;
+const max = 6;
+const rand = min + Math.floor(Math.random() * (max - min));
+
+class RandomQuote extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    rand : min + Math.floor(Math.random() * (max - min))
+    };
+  }
+     handleClick = () => {
+        this.setState({rand : min + Math.floor(Math.random() * (max - min))});
+    };
+  
+  render() {
+    return (
+      <div id="wrapper">
+        <h1>Random Quote Generator</h1>
+        <div id="quote-box" class="text-center">
+          <div id="text">"{quotes.text[this.state.rand]}"</div>
+          <div id="author">{quotes.author[this.state.rand]}</div>
+          <div id="buttons">
+            
+          <button onClick={this.handleClick} id="new-quote">New Quote</button>
+            
+          <button id ="tweet-quote"><a href={"https://twitter.com/intent/tweet?text='"+quotes.text[this.state.rand]+"' - "+quotes.author[this.state.rand]} target='_blank'>Tweet Quote</a></button>
+          </div>
+        </div>
+        </div>
+    );
+  }
+}
+
+
+ReactDOM.render(<RandomQuote/>, document.getElementById('App'));

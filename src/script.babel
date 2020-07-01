@@ -3,7 +3,7 @@ const quotes = {
   "author": ["George Carlin", "Bob Ross", "Carl Sandburg", "Eugene Ionesco", "Stanislaw Jerzy Lec", "Antonio Porchia"]
 }
 
-const min = 1;
+const min = 0;
 const max = 6;
 const rand = min + Math.floor(Math.random() * (max - min));
 
